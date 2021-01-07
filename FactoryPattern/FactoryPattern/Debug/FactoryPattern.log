@@ -1,0 +1,6 @@
+﻿  ShapeFactory.cpp
+  FactoryPattenDemo.cpp
+  正在生成代码...
+d:\practice\designpatterns\factorypattern\factorypattern\shapefactory.cpp(21): warning C4715: “ShapeFactory::getShape”: 不是所有的控件路径都返回值
+  FactoryPattern.vcxproj -> D:\Practice\DesignPatterns\FactoryPattern\Debug\FactoryPattern.exe
+  FactoryPattern.vcxproj -> D:\Practice\DesignPatterns\FactoryPattern\Debug\FactoryPattern.pdb (Partial PDB)
