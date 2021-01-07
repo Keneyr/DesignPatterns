@@ -31,6 +31,27 @@ C++实现编程中常见设计模式(工厂/单例/组合/享元/观察/状态�
 
 这就是通过同一个接口，返回不同的产品对象，实现不同的逻辑；这个接口是被这个工厂管理的。所以叫做工厂模式。
 
+
+## 抽象工厂模式
+
+工厂模式确实很容易理解，但是在实际大型项目中，很多时候用的都是抽象工厂模式，所以这里要学会抽象工厂模式。
+
+抽象工厂模式（Abstract Factory Pattern）是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
+
+在抽象工厂模式中，接口是负责创建一个相关对象的工厂，不需要显式指定它们的类。每个生成的工厂都能按照工厂模式提供对象。
+
+有图就不多BB：
+
+我们将创建 *Shape* 和 *Color* 接口和实现这些接口的实体类。下一步是创建抽象工厂类 *AbstractFactory*。接着定义工厂类 *ShapeFactory* 和 *ColorFactory*，这两个工厂类都是扩展了 *AbstractFactory*。然后创建一个工厂创造器/生成器类 *FactoryProducer*。
+
+*AbstractFactoryPatternDemo* 类使用 *FactoryProducer* 来获取 *AbstractFactory* 对象。它将向 *AbstractFactory* 传递形状信息 *Shape（CIRCLE / RECTANGLE / SQUARE）*，以便获取它所需对象的类型。同时它还向 *AbstractFactory* 传递颜色信息 *Color（RED / GREEN / BLUE）*，以便获取它所需对象的类型。
+
+![类图](images/AbstractFactoryPattern.png)
+
+说白了还是虚函数和多态！！！只是一下子搞了两层的虚函数和多态！！！相当于是工厂也给抽象出基类了，不同的工厂对象，可以取得不同性质的产品：形状和颜色。
+
+可以看到，工厂模式的缺陷还是比较明显的，那就是多一层抽象就会一下子多出来好多类来维护。
+
 ## 单例模式
 
 
