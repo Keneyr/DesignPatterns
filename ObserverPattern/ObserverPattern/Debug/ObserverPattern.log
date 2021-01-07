@@ -1,0 +1,14 @@
+﻿  Subject.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\algorithm(69): error C2664: “void (Observer &)”: 无法将参数 1 从“Observer *”转换为“Observer &”
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\algorithm(77): note: 参见对正在编译的函数 模板 实例化“void std::_For_each_unchecked<Observer**,void(__cdecl *)(Observer &)>(_InIt,_InIt,_Fn1 &)”的引用
+          with
+          [
+              _InIt=Observer **,
+              _Fn1=void (__cdecl *)(Observer &)
+          ]
+  d:\practice\designpatterns\observerpattern\observerpattern\subject.cpp(18): note: 参见对正在编译的函数 模板 实例化“_Fn1 (__cdecl *std::for_each<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<Observer *>>>,void(__cdecl *)(Observer &)>(_InIt,_InIt,_Fn1))(Observer &)”的引用
+          with
+          [
+              _Fn1=void (__cdecl *)(Observer &),
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<Observer *>>>
+          ]
