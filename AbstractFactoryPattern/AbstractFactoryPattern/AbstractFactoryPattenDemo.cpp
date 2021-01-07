@@ -24,6 +24,8 @@ int main()
     AbstractFactory* abstrctShapeFactory = FactoryProducer::getFactory(factoryChoices[0]);
     Shape* circleShape = abstrctShapeFactory->getShape(Shapes[0]);
     circleShape->draw();
+	delete circleShape；
+	delete abstrctShapeFactory
 
     system("pause");
     return 0;
