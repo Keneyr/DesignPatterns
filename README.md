@@ -139,8 +139,34 @@ C++实现编程中常见设计模式(工厂/单例/组合/享元/观察/状态�
 
 另外真的越来越感觉对STL的原理的掌握是多么重要。正如侯捷专家所说，不会STL的C++程序员，不是一个合格的程序员...原来我离合格C++程序员还差的很远...（QWQ）
 
+感觉能够自己写出STL模板的C++程序员才算合格吧...越来越喜欢C++了...
+
 
 ## 享元模式
+
+享元模式（Flyweight Pattern）主要用于减少创建对象的数量，以减少内存占用和提高性能。这种类型的设计模式属于结构型模式，它提供了减少对象数量从而改善应用所需的对象结构的方式。
+
+享元模式尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象。
+
+有图就不多BB：
+
+我们将创建一个 *Shape* 接口和实现了 *Shape* 接口的实体类 *Circle*。下一步是定义工厂类 *ShapeFactory*。
+
+*ShapeFactory* 有一个 *Circle* 的 *HashMap*，其中键名为 *Circle* 对象的颜色。无论何时接收到请求，都会创建一个特定颜色的圆。*ShapeFactory* 检查它的 *HashMap* 中的 *circle* 对象，如果找到 *Circle* 对象，则返回该对象，否则将创建一个存储在 *hashmap* 中以备后续使用的新对象，并把该对象返回到客户端。
+
+*FlyWeightPatternDemo* 类使用 *ShapeFactory* 来获取 *Shape* 对象。它将向 *ShapeFactory* 传递信息*（red / green / blue/ black / white）*，以便获取它所需对象的颜色。
+
+![类图](images/FlyweightPattern.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
